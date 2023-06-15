@@ -48,3 +48,13 @@ To update everything from a clean slate, run:
 
 To update certain files, just delete the file from `./projects/myproject/data` and run the build command without the `--reset` flag.
 
+## Required data
+
+To use this, two additional data files are required:
+
+1. `./data/judge_entities.csv`
+A csv export of SCALES-OKN judge table in mongo
+
+2. `./data/global_index.csv`
+An index of SCALES-OKN case data.  If you have a directory with PACER data from the pacer-tools crawler you can set an env var `PACER_DIR=/path/to/pacer` and run `pacer-stats build-global-index` to create this file.
+
